@@ -29,7 +29,7 @@ setup(
     description="PyKindle: Generate mobi files in a programming way",
     long_description=get_readme(),
     author_email='haoyupan@aliyun.com',
-    install_requires=['jinja2'],
+    install_requires=['jinja2', 'markdown'],
     url="https://github.com/panhaoyu/pykindle",
     packages=find_packages(),
     license='GPL',

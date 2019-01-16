@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="KindleFere_2010-10-15">
+<metadata>
+	<dc-metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<dc:title>{{ title }}</dc:title>
+		<dc:language>{{ language }}</dc:language>
+		<dc:Identifier id="uid">{{ uid }}</dc:Identifier>
+		<dc:creator>{{ creator }}</dc:creator>
+		<dc:publisher>{{ publisher }}</dc:publisher>
+		<dc:subject>{{ subject }}</dc:subject>
+		<dc:date>{{ date }}</dc:date>
+		<dc:description>{{ description }}</dc:description>
+	</dc-metadata>
+	<x-metadata>
+		<output content-type="application/x-mobipocket-subscription-magazine" encoding="utf-8"/>
+		<EmbeddedCover>{{ cover_image_url }}</EmbeddedCover>
+	</x-metadata>
+</metadata>
+<manifest>
+{% for item in items %}
+	<item href="{{ item.href }}" media-type="{{ item.media_type }}" id="{{ item.id }}"/>
+{% endfor %}
+</manifest>
+<spine toc="{{ ncx_id }}">
+{% for article in articles %}
+    <itemref idref="{{ article.id }}/>
+{% endfor %}
+</spine>
+<!-- TODO
+<guide>
+	<reference href="html/contents.html" type="toc" title="Table of Contents" />
+	<reference href="html/001.html" type="text" title="《自由选择》地球人不可不读的书"/>
+</guide>
+-->
+</package>
