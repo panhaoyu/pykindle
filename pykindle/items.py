@@ -3,11 +3,24 @@ from pykindle import readers
 
 
 class FieldNotSetError(Exception):
+    """
+    When user get a field of an item that has not been set yet, raise.
+    """
+
     def __init__(self, field):
         super(FieldNotSetError, self).__init__('{} not set.'.format(field))
 
 
 class Item(dict):
+    """
+    Item represents an asset of mobi files.
+    This is a base class, you should inherit from it.
+
+    Mobi file consists of several assets and a manifest.
+    Each item renders to a asset,
+    including articles, images and manifest files.
+    """
+
     def __init__(self, *args, **kwargs):
         super(Item, self).__init__(*args, **kwargs)
         self._default = dict()
@@ -26,6 +39,12 @@ class Item(dict):
 
     @property
     def href(self):
+        """
+        Mobi file is just like a html directory,
+        and each asset has it's relative url in the mobi file.
+        Html assets get other html assets and image assets by relative url.
+        :return:
+        """
         return self['href']
 
     @href.setter
