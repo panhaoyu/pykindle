@@ -9,6 +9,7 @@ Welcome to PyKindle's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :undoc-members:
 
    tutorial
    books
