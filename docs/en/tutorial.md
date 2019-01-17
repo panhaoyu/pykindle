@@ -45,4 +45,4 @@ with open('my_book.mobi',mode='wb') as file:
 The example is saved [here][magazine_example.py]
 
 
-[magazine_example.py]: https://github.com/panhaoyu/pykindle/examples/create_magazine.py
+[magazine_example.py]: https://github.com/panhaoyu/pykindle/blob/master/examples/create_magazine.py

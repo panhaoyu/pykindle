@@ -12,7 +12,7 @@ Kindlegen packaged all the functions in a file,
 
 ```python
 import pykindle
-book = pykindle.Magazine()
+book = pykindle.MagazineBook()
 article = pykindle.MarkdownArticleItem()
 article.href = 'page1.html'
 article.source = 'This is a page.'
