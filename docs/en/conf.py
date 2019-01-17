@@ -1,7 +1,8 @@
-from recommonmark.parser import CommonMarkParser
+import recommonmark.parser
 
 source_parsers = {
-    '.md': CommonMarkParser,
+    '.md': recommonmark.parser.CommonMarkParser,
 }
+
 master_doc = 'index'
-source_suffix = ['.md']
+source_suffix = {'.md': 'markdown'}
