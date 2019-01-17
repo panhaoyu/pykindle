@@ -213,4 +213,4 @@ class MagazineNcxItem(NcxItem):
 
 
 __all__ = ['Item', 'ArticleItem', 'HtmlArticleItem', 'MarkdownArticleItem', 'ImageItem', 'CoverImageItem', 'NcxItem',
-           'MagazineNcxItem']
+           'MagazineNcxItem', 'FieldNotSetError']
