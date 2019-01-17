@@ -1,8 +1,9 @@
 import os
-import glob
 import tempfile
 import pykindle
 
+
+# I get the test data from https://github.com/jachinlin/kindle_maker/tree/master/examples/source.
 
 def test_magazine():
     book = pykindle.Magazine()
