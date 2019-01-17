@@ -16,14 +16,17 @@
 		<EmbeddedCover>{{ cover_image_url }}</EmbeddedCover>
 	</x-metadata>
 </metadata>
+
 <manifest>
 {% for item in items %}
 	<item href="{{ item.href }}" media-type="{{ item.media_type }}" id="{{ item.id }}"/>
 {% endfor %}
+	<item href="{{ ncx.href }}" media-type="{{ ncx.media_type }}" id="{{ ncx.id }}"/>
 </manifest>
-<spine toc="{{ ncx_id }}">
+
+<spine toc="{{ ncx.id }}">
 {% for article in articles %}
-    <itemref idref="{{ article.id }}/>
+    <itemref idref="{{ article.id }}" />
 {% endfor %}
 </spine>
 <!-- TODO
