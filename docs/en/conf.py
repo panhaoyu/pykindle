@@ -5,4 +5,4 @@ source_parsers = {
 }
 
 master_doc = 'index'
-source_suffix = {'.md': 'markdown'}
+source_suffix = ['.md']
