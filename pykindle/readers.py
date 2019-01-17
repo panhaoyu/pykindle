@@ -61,3 +61,6 @@ class MagazineNcxReader(NcxReader):
             'author': author
         })
         return result
+
+
+__all__ = ['Reader', 'TemplateReader', 'HtmlReader', 'MarkdownReader', 'MagazineNcxReader', 'NcxReader', 'ImageReader']

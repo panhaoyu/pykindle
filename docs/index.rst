@@ -11,5 +11,7 @@ Welcome to PyKindle's documentation!
    :caption: Contents:
 
    tutorial
+   books
    items
+   readers
 

@@ -91,3 +91,6 @@ class NormalBook(Book):
 
 class MagazineBook(Book):
     pass
+
+
+__all__ = ['Book', 'MagazineBook', 'NormalBook']
