@@ -97,7 +97,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -113,7 +113,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'testdoc'
+htmlhelp_basename = 'pykindledoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -139,8 +139,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'test.tex', 'test Documentation',
-     'test', 'manual'),
+    (master_doc, 'PyKindle.tex', 'PyKindle Documentation',
+     'PyKindle', 'manual'),
 ]
 
 # -- Options for manual page output ------------------------------------------
@@ -158,8 +158,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'test', 'test Documentation',
-     author, 'test', 'One line description of project.',
+    (master_doc, 'PyKindle', 'PyKindle Documentation',
+     author, 'PyKindle', 'Creating mobi files in a programming way.',
      'Miscellaneous'),
 ]
 
