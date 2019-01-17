@@ -32,3 +32,17 @@ Currently, PyKindle only support to generate a magazine format book without phot
 
 [magazine_example]: https://github.com/panhaoyu/pykindle/blob/master/tests/test_magazine.py
 
+# Need help
+
+I'm new in open source, and many people help me,
+so if you want to join my project, tell me,
+and I'll try my best to help you.
+
+As a previous version,
+you can change the APIs,
+you can add anything you like.
+
+I hope to make pykindle the best kindle library.
+
+If you are also new here,
+help me to create documentation, create testcases, or translate the documentation.
