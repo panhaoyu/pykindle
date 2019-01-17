@@ -6,7 +6,7 @@ import pykindle
 # I get the test data from https://github.com/jachinlin/kindle_maker/tree/master/examples/source.
 
 def test_magazine():
-    book = pykindle.Magazine()
+    book = pykindle.MagazineBook()
     base_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data')
     contents = {
         '技术领导力300讲': [

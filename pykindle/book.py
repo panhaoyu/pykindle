@@ -89,5 +89,5 @@ class NormalBook(Book):
         raise NotImplementedError
 
 
-class Magazine(Book):
+class MagazineBook(Book):
     pass
