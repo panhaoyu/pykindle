@@ -4,7 +4,7 @@ Title: PyKindle
    :maxdepth: 2
    :caption: Contents:
    
-   tutorial
+   tutorial.md
 
 # PyKindle
 
