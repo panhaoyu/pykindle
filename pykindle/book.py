@@ -71,7 +71,7 @@ class Book(list):
 
     def _generate_article_id(self):
         for index, item in enumerate(self):
-            item.id = index
+            item.id = str(index)
 
     def create(self):
         with tempfile.TemporaryDirectory() as directory:

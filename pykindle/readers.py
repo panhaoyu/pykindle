@@ -48,6 +48,12 @@ class NcxReader(TemplateReader):
 
 class MagazineNcxReader(NcxReader):
     def render(self, categories, title, author):
+        assert isinstance(categories, list)
+        if len(categories) == 0:
+            raise ValueError('There is no category.')
+        for category, articles in categories:
+            if len(articles) == 0:
+                raise ValueError('There is no article in {}'.format(category))
         template = self._jinja2.get_template('magazine.ncx')
         result = template.render({
             'categories': categories,
