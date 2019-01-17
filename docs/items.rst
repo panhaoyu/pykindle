@@ -5,5 +5,6 @@ Items
     :members:
     :show-inheritance:
     :undoc-members:
+    :special-members:
 
 

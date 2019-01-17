@@ -5,4 +5,5 @@ Books
     :members:
     :show-inheritance:
     :undoc-members:
+    :special-members:
 
