@@ -16,7 +16,8 @@ import os
 import sys
 import sphinx_rtd_theme
 
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(1, os.path.abspath('..'))
+sys.path.insert(1, os.path.abspath('../pykindle'))
 
 # -- Project information -----------------------------------------------------
 
@@ -51,7 +52,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = []
+templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
