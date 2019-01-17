@@ -16,8 +16,8 @@ import os
 import sys
 import sphinx_rtd_theme
 
-sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
 sys.path.insert(1, os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pykindle'))
 
 # -- Project information -----------------------------------------------------
@@ -35,7 +35,7 @@ release = ''
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '1.0'
+needs_sphinx = '1.1'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
