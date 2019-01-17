@@ -11,9 +11,7 @@ Welcome to PyKindle's documentation!
    :caption: Contents:
 
    tutorial
-
-.. automodule:: items
-   :members:
+   items
 
 
 
