@@ -1,7 +1,7 @@
 Items
 =======
 
-.. automodule:: items
+.. automodule:: pykindle.items
     :members:
     :show-inheritance:
 

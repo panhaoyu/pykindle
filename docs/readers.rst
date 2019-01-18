@@ -1,6 +1,6 @@
 Readers
 ==============
 
-.. automodule:: readers
+.. automodule:: pykindle.readers
     :members:
     :show-inheritance:

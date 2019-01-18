@@ -1,7 +1,7 @@
 Books
 =============
 
-.. automodule:: book
+.. automodule:: pykindle.book
     :members:
     :show-inheritance:
 
