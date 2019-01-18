@@ -32,6 +32,7 @@ setup(
     install_requires=['jinja2', 'markdown'],
     url="https://github.com/panhaoyu/pykindle",
     packages=find_packages(),
+    include_package_data=True,
     license='GPL',
     classifiers=[
         'Intended Audience :: Developers',
