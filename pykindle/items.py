@@ -50,10 +50,9 @@ class Item(dict):
     @property
     def href(self):
         """
-        Mobi file is just like a html directory,
+        Mobi file is just like a html website,
         and each asset has it's relative url in the mobi file.
         Html assets get other html assets and image assets by relative url.
-        :return:
         """
         return self['href']
 
@@ -64,6 +63,11 @@ class Item(dict):
 
     @property
     def media_type(self):
+        """
+        Every mobi asset has a field to indicates what it is, for example,
+        application/xhtml+xml represents an article,
+        image/jpg represents a photo in jpg format.
+        """
         return self['media_type']
 
     @media_type.setter
@@ -74,6 +78,12 @@ class Item(dict):
 
     @property
     def id(self):
+        """
+        Id field should be a string! Not integer!
+        Just like html elements has a "id" field,
+        mobi assets also have such field.
+        The difference is that in mobi assets, "id" field in required.
+        """
         return self['id']
 
     @id.setter
@@ -83,6 +93,10 @@ class Item(dict):
 
     @property
     def source(self):
+        """
+        Source is the main content of the asset.
+        It will later send to self.reader.render to get the rendered result.
+        """
         return self['source']
 
     @source.setter
@@ -92,6 +106,12 @@ class Item(dict):
 
     @property
     def reader(self):
+        """
+        Sometimes we need to convert some files to mobi supported assets.
+        That's why we use reader.
+        Reader should be a instance of pykindle.reader.Reader class.
+        Item will call self.reader.render(self.source) to generate rendered assets.
+        """
         return self['reader']
 
     @reader.setter
@@ -101,9 +121,17 @@ class Item(dict):
 
     @property
     def content(self):
+        """
+        Readonly field.
+        It just return the value of self.reader.render(self.source).
+        """
         return self.reader.render(self.source)
 
     def write(self, directory):
+        """
+        Write the rendered content to a file.
+        File path is calculated by os.path.join(directory, self.href).
+        """
         path = os.path.join(directory, *self.href.split('/'))
         with open(path, mode='w', encoding='utf-8') as file:
             file.write(self.content)
