@@ -19,6 +19,16 @@ class Item(dict):
     Mobi file consists of several assets and a manifest.
     Each item renders to a asset,
     including articles, images and manifest files.
+
+    Item class inherited from python dict class.
+    You can set attributes in two ways:
+
+    >>> item = Item()
+    >>> item['href'] = 'path/to/item'
+    >>> assert item.href == 'path/to/item'
+    >>> item.href = 'path/to/item/changed'
+    >>> assert item['href'] = 'path/to/item/changed'
+
     """
 
     def __init__(self, *args, **kwargs):

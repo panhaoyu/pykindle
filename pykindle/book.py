@@ -12,6 +12,9 @@ class Book(list):
     You should extend it, rather than use it directly.
     See MagazineBook.
 
+    This class is inherited from python list class.
+    You can use all list functions.
+
     Required attributes: None
 
     Alternative attributes: title, language, uid, creator, publisher, subject, author, date, description
@@ -94,9 +97,11 @@ class Book(list):
 
 
 class NormalBook(Book):
-    def insert(self, *args, **kwargs):
-        super(NormalBook, self).insert(*args, **kwargs)
-        raise NotImplementedError
+    """
+    This class represents a normal book.
+    Normal means the book has a toc, and readers will read from first paragraph to last paragraph.
+    """
+    pass
 
 
 class MagazineBook(Book):
