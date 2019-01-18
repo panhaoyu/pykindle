@@ -263,7 +263,7 @@ class NcxItem(Item):
     """
     NcxItem is used to generate ncx file.
     Ncx file is the category of a book.
-    It will automatically added to the book when book.create is called.
+    It will be automatically added to the book when book.create is called.
     """
     def __init__(self, *args, **kwargs):
         super(NcxItem, self).__init__(*args, **kwargs)
