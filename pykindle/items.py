@@ -107,7 +107,7 @@ class Item(dict):
     @property
     def reader(self):
         """
-        Sometimes we need to convert some files to mobi supported assets.
+        Smetimes we need to convert some files to mobi supported assets.
         That's why we use reader.
         Reader should be a instance of pykindle.reader.Reader class.
         Item will call self.reader.render(self.source) to generate rendered assets.
@@ -138,6 +138,19 @@ class Item(dict):
 
 
 class ArticleItem(Item):
+    """
+    ArticleItem represents an real html article.
+    This is the main body of your book.
+
+    This class is used for inherit.
+
+    Default attributes:
+        title = Untitled
+        author = No Author
+        description = No description
+        category = default
+    """
+
     def __init__(self, *args, **kwargs):
         super(ArticleItem, self).__init__(*args, **kwargs)
         self.media_type = 'application/xhtml+xml'
@@ -150,6 +163,9 @@ class ArticleItem(Item):
 
     @property
     def title(self):
+        """
+        The title of article.
+        """
         return self['title']
 
     @title.setter
@@ -159,6 +175,9 @@ class ArticleItem(Item):
 
     @property
     def author(self):
+        """
+        The author of article.
+        """
         return self['author']
 
     @author.setter
@@ -168,6 +187,9 @@ class ArticleItem(Item):
 
     @property
     def description(self):
+        """
+        The description of article.
+        """
         return self['description']
 
     @description.setter
@@ -177,6 +199,12 @@ class ArticleItem(Item):
 
     @property
     def category(self):
+        """
+        Optional.
+        If you generates a magazine book, this field is used to calculate the magazine category.
+        Deprecated. We will create a Category class to do this.
+        :return:
+        """
         return self['category']
 
     @category.setter
@@ -190,18 +218,32 @@ class ArticleItem(Item):
 
 
 class HtmlArticleItem(ArticleItem):
+    """
+    HtmlArticleItem represents a html article.
+    Although all the articles in mobi files are html,
+    we have other ArticleItem like MarkdownArticleItem to convert other formats to html.
+    """
+
     def __init__(self, *args, **kwargs):
         super(HtmlArticleItem, self).__init__(*args, **kwargs)
         self.reader = readers.HtmlReader()
 
 
 class MarkdownArticleItem(ArticleItem):
+    """
+    MarkdownArticleItem reads a markdown source.
+    """
+
     def __init__(self, *args, **kwargs):
         super(MarkdownArticleItem, self).__init__(*args, **kwargs)
         self.reader = readers.MarkdownReader()
 
 
 class ImageItem(Item):
+    """
+    ImageItem represents a image asset.
+    It has a positional argument, image_format='jpeg', alternative formats are jpeg, png, gif
+    """
     def __init__(self, image_format='jpeg', *args, **kwargs):
         super(ImageItem, self).__init__(*args, **kwargs)
         assert image_format in ('jpeg', 'png', 'gif')
@@ -211,10 +253,18 @@ class ImageItem(Item):
 
 
 class CoverImageItem(ImageItem):
+    """
+    CoverImageItem represents a cover image.
+    """
     pass
 
 
 class NcxItem(Item):
+    """
+    NcxItem is used to generate ncx file.
+    Ncx file is the category of a book.
+    It will automatically added to the book when book.create is called.
+    """
     def __init__(self, *args, **kwargs):
         super(NcxItem, self).__init__(*args, **kwargs)
         self.media_type = 'application/x-dtbncx+xml'
@@ -245,6 +295,10 @@ class NcxItem(Item):
 
 
 class MagazineNcxItem(NcxItem):
+    """
+    MagazineNcxItem represents a magazine toc.
+    The way to implement magazine is very ugly, and we'll reconstruct these classes.
+    """
     def __init__(self, *args, **kwargs):
         super(MagazineNcxItem, self).__init__(*args, **kwargs)
         self.reader = readers.MagazineNcxReader()
