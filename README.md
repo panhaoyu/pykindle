@@ -8,6 +8,8 @@ Kindlegen packaged all the functions in a file,
 
 `pip install pykindle`
 
+Please get kindlegen from amazon website and 
+
 # Documentation
 
 [documentation](https://pykindle.readthedocs.io)
