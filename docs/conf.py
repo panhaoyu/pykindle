@@ -14,11 +14,11 @@
 #
 import os
 import sys
+import recommonmark
 import sphinx_rtd_theme
 
 sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
-# sys.path.insert(1, os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pykindle'))
 
 # -- Project information -----------------------------------------------------
 
@@ -46,12 +46,12 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.imgmath',
+    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'recommonmark',
 ]
-
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
 
@@ -59,7 +59,7 @@ extensions = [
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
