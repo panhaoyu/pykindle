@@ -14,7 +14,7 @@
 #
 import os
 import sys
-import recommonmark
+import recommonmark.parser
 import sphinx_rtd_theme
 
 sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
@@ -50,7 +50,6 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'recommonmark',
 ]
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
@@ -60,7 +59,7 @@ extensions = [
 #
 # source_suffix = ['.rst', '.md']
 source_suffix = ['.md']
-source_parsers = {'.md': 'recommonmark.parser.CommonMarkParser'}
+source_parsers = {'.md': recommonmark.parser.CommonMarkParser}
 
 # The master toctree document.
 master_doc = 'index'
