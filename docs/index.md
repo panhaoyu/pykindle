@@ -7,16 +7,9 @@
 
 ## Contents
 
-* [tutorial](tutorial.md)
-
-```
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   tutorial
-   books
-   items
-   readers
-```
-
+* [Tutorial](tutorial.md)
+* [Readers](readers.md)
+* [Items](items.md)
+* [Books](books.md)
+* APIs
+    [Items](apis/items.md)
