@@ -11,5 +11,4 @@
 * [Readers](readers.md)
 * [Items](items.md)
 * [Books](books.md)
-* APIs
-    * [Items](apis/items.md)
+* [Items](apis/items.md)
