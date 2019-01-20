@@ -59,7 +59,7 @@ extensions = [
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.md'
+source_suffix = {'.md': 'recommonmark'}
 
 # The master toctree document.
 master_doc = 'index'
