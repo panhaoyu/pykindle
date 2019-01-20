@@ -5,9 +5,11 @@
 
 # Welcome to PyKindle's documentation!
 
+## Contents
 
+* [tutorial](tutorial.md)
 
-```eval_rst
+```
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
